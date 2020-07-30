@@ -15,3 +15,8 @@ code {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.error{
+  text-align: center;
+  color: red;
+}
