@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/json-representation-component/static/css/main.ffcef4c4.chunk.css",
-    "main.js": "/json-representation-component/static/js/main.ff47c995.chunk.js",
-    "main.js.map": "/json-representation-component/static/js/main.ff47c995.chunk.js.map",
+    "main.css": "/json-representation-component/static/css/main.8801bde3.chunk.css",
+    "main.js": "/json-representation-component/static/js/main.e8bd3456.chunk.js",
+    "main.js.map": "/json-representation-component/static/js/main.e8bd3456.chunk.js.map",
     "runtime-main.js": "/json-representation-component/static/js/runtime-main.78df2241.js",
     "runtime-main.js.map": "/json-representation-component/static/js/runtime-main.78df2241.js.map",
-    "static/js/2.f115dee4.chunk.js": "/json-representation-component/static/js/2.f115dee4.chunk.js",
-    "static/js/2.f115dee4.chunk.js.map": "/json-representation-component/static/js/2.f115dee4.chunk.js.map",
+    "static/js/2.a1463c83.chunk.js": "/json-representation-component/static/js/2.a1463c83.chunk.js",
+    "static/js/2.a1463c83.chunk.js.map": "/json-representation-component/static/js/2.a1463c83.chunk.js.map",
     "index.html": "/json-representation-component/index.html",
-    "precache-manifest.f1aedeac0baaf5982f1b2ad08cc332cb.js": "/json-representation-component/precache-manifest.f1aedeac0baaf5982f1b2ad08cc332cb.js",
+    "precache-manifest.7dbe453d04d299dae65adcc78b960772.js": "/json-representation-component/precache-manifest.7dbe453d04d299dae65adcc78b960772.js",
     "service-worker.js": "/json-representation-component/service-worker.js",
-    "static/css/main.ffcef4c4.chunk.css.map": "/json-representation-component/static/css/main.ffcef4c4.chunk.css.map",
-    "static/js/2.f115dee4.chunk.js.LICENSE.txt": "/json-representation-component/static/js/2.f115dee4.chunk.js.LICENSE.txt"
+    "static/css/main.8801bde3.chunk.css.map": "/json-representation-component/static/css/main.8801bde3.chunk.css.map",
+    "static/js/2.a1463c83.chunk.js.LICENSE.txt": "/json-representation-component/static/js/2.a1463c83.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.78df2241.js",
-    "static/js/2.f115dee4.chunk.js",
-    "static/css/main.ffcef4c4.chunk.css",
-    "static/js/main.ff47c995.chunk.js"
+    "static/js/2.a1463c83.chunk.js",
+    "static/css/main.8801bde3.chunk.css",
+    "static/js/main.e8bd3456.chunk.js"
   ]
 }
