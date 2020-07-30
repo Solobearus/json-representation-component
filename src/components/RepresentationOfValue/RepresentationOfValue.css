@@ -14,7 +14,7 @@
     color: green;
 }
 
-.undefined,.null {
+.null {
     color: silver;
 }
 

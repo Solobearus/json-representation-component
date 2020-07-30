@@ -24,7 +24,6 @@ const JsonItemObjectWrapper = ({ jsonValue }) => (
 
 export const RepresentationOfValue = ({ typeOfJsonValue, open, jsonValue }) => {
   const representationOfValueByTypes = {
-    undefined: () => <span className="undefined value">{`undefined`}</span>,
     boolean: () => <span className="boolean value">{`${jsonValue ? 'True' : 'False'}`}</span>,
     string: () => <span className="string value">{`"${jsonValue}"`}</span>,
     number: () => <span className="number value">{jsonValue}</span>,
