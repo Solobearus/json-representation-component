@@ -1,3 +1,20 @@
 .value{
     margin-left: 5px;
 }
+
+.boolean{
+    color: purple;
+}
+
+.number {
+    color: blue;
+}
+
+.string {
+    color: green;
+}
+
+.undefined,.null {
+    color: silver;
+}
+

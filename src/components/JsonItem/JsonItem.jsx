@@ -10,7 +10,7 @@ const JsonItem = ({ keyOfNode, jsonValue }) => {
 
   return (
     <div className={"jsonItem"} data-testid="JsonItem">
-      <RepresentationOfKey typeOfJsonValue={typeOfJsonValue} open={open} setOpen={setOpen} keyOfNode={keyOfNode} />
+      <RepresentationOfKey typeOfJsonValue={typeOfJsonValue} open={open} setOpen={setOpen} keyOfNode={keyOfNode} jsonValue={jsonValue}/>
       <RepresentationOfValue typeOfJsonValue={typeOfJsonValue} open={open} jsonValue={jsonValue} />
     </div>
   );
