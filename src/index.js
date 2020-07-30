@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 import JsonRepresentation from './JsonRepresentation';
 import * as serviceWorker from './serviceWorker';
 
+const initialUrlInput = `https://archive.org/advancedsearch.php?q=subject:google+sheets&output=json`;
+
 ReactDOM.render(
   <React.StrictMode>
-    <JsonRepresentation />
+    <JsonRepresentation initialUrlInput={initialUrlInput} />
   </React.StrictMode>,
   document.getElementById('root')
 );

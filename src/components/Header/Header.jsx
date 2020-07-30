@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import "./Header.css";
 
-const Header = ({ urlInput, setUrlInput, fetchJson, loading }) => {
+const Header = ({ initialUrlInput, fetchJson, isLoading }) => {
+  
+  const [urlInput, setUrlInput] = useState("");
+
+  useEffect(() => {
+    setUrlInput(initialUrlInput);
+  }, []);
+
   return (
     <div className="header" data-testid="header">
       <div>URL:</div>
@@ -11,7 +18,7 @@ const Header = ({ urlInput, setUrlInput, fetchJson, loading }) => {
           fetchJson(urlInput);
         }}
       >
-        {loading ? <div className="spinner">🧙‍♂️</div> : "Fetch JSON"}
+        {isLoading ? <div className="spinner">🧙‍♂️</div> : "Fetch JSON"}
       </button>
     </div>
   );
