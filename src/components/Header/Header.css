@@ -12,3 +12,17 @@
 .header__input{
     min-width: 300px;
 }
+
+.spinner{
+    animation: loader 1.2s linear infinite;
+}
+
+@keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

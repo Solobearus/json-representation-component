@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 
-const Header = ({ urlInput, setUrlInput, fetchJson }) => {
+const Header = ({ urlInput, setUrlInput, fetchJson, loading }) => {
   return (
     <div className="header" data-testid="header">
       <div>URL:</div>
@@ -11,7 +11,7 @@ const Header = ({ urlInput, setUrlInput, fetchJson }) => {
           fetchJson(urlInput);
         }}
       >
-        Fetch JSON
+        {loading ? <div className="spinner">🧙‍♂️</div> : "Fetch JSON"}
       </button>
     </div>
   );
