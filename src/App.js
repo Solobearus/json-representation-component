@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Header from './Header/Header';
-import JsonItem from './JsonItem/JsonItem'
+import JsonItem from './components/JsonItem/JsonItem'
 
 function App() {
 
