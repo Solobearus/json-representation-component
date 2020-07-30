@@ -7,9 +7,14 @@ function App() {
 
   const [urlInput, setUrlInput] = useState('');
 
+  const fetchJson = inputValue =>
+    fetch(inputValue)
+      .then(res => res.json())
+      .then(res => console.log(res))
+
   return (
     <div className="App">
-      <Header urlInput={urlInput} setUrlInput={setUrlInput}/>
+      <Header urlInput={urlInput} setUrlInput={setUrlInput} fetchJson={fetchJson}/>
     </div>
   );
 }

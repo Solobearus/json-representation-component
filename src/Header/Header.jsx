@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 
-const Header = ({ urlInput, setUrlInput }) => {
+const Header = ({ urlInput, setUrlInput, fetchJson }) => {
   return (
     <div className="header" data-testid="header">
       <div>URL:</div>
@@ -10,7 +10,7 @@ const Header = ({ urlInput, setUrlInput }) => {
         value={urlInput}
         onChange={(e) => setUrlInput(e.target.value)}
       />
-      <button onClick={() => {}}>Show JSON</button>
+      <button onClick={() => {fetchJson()}}>Fetch JSON</button>
     </div>
   );
 };
