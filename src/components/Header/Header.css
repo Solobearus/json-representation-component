@@ -1,3 +1,14 @@
 .header{
-    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.header > *{
+    margin: 5px;
+}
+
+.header__input{
+    min-width: 300px;
 }

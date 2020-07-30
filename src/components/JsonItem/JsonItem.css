@@ -8,8 +8,6 @@
     align-items: flex-start;
 }
 
-
-
 .number {
     color: blue;
 }
@@ -21,4 +19,3 @@
 .null {
     color: grey;
 }
-
