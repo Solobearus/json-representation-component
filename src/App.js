@@ -11,15 +11,16 @@ function App() {
   const [error, setError] = useState('')
   
   const fetchJson = async (inputValue) => {
+    setJsonResponse({})
     setLoading(true);
     setError('');
     
     await fetch(inputValue)
       .then(res => res.json())
-      .then(res => {
-        console.log(res)
-        setJsonResponse(res)})
-      .catch(error => {setError("ERROR : " + error + ' --- please check that the url is valid')});
+      .then(res => setJsonResponse(res))
+      .catch(error => {
+        setError("ERROR : " + error + ' --- please check that the url is valid')
+      });
 
     setLoading(false);  
   }
