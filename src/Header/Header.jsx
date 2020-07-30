@@ -10,7 +10,7 @@ const Header = ({ urlInput, setUrlInput, fetchJson }) => {
         value={urlInput}
         onChange={(e) => setUrlInput(e.target.value)}
       />
-      <button onClick={() => {fetchJson()}}>Fetch JSON</button>
+      <button onClick={() => {fetchJson(urlInput)}}>Fetch JSON</button>
     </div>
   );
 };
