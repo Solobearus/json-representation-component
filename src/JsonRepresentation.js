@@ -31,7 +31,7 @@ function JsonRepresentation({ initialUrlInput }) {
   }
 
   return (
-    <div className="jsonRepresentation" data-testid="jsonRepresentation">
+    <div className="jsonRepresentation" >
       <Header initialUrlInput={initialUrlInput} fetchJson={fetchJson} isLoading={isLoading} />
       <div className="error">{error}</div>
       <div className="jsonHolder">
