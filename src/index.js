@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import JsonRepresentation from './JsonRepresentation';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <JsonRepresentation />
   </React.StrictMode>,
   document.getElementById('root')
 );

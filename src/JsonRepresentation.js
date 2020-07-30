@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import Header from './components/Header/Header';
-import './App.css';
+import './JsonRepresentation.css';
 import JsonItem from './components/JsonItem/JsonItem'
 
-function App() {
+function JsonRepresentation() {
 
-  const [urlInput, setUrlInput] = useState('')
+  const [urlInput, setUrlInput] = useState('');
   const [jsonResponse, setJsonResponse] = useState({});
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('')
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
   
   const fetchJson = async (inputValue) => {
-    setJsonResponse({})
-    setLoading(true);
+    setJsonResponse({});
+    setIsLoading(true);
     setError('');
     
     await fetch(inputValue)
@@ -22,12 +22,12 @@ function App() {
         setError("ERROR : " + error + ' --- please check that the url is valid')
       });
 
-    setLoading(false);  
+    setIsLoading(false);  
   }
 
   return (
-    <div className="App" data-testid="App">
-      <Header urlInput={urlInput} setUrlInput={setUrlInput} fetchJson={fetchJson} loading={loading} />
+    <div className="JsonRepresentation" data-testid="JsonRepresentation">
+      <Header urlInput={urlInput} setUrlInput={setUrlInput} fetchJson={fetchJson} isLoading={isLoading} />
       <div className="error">{error}</div>
       <div className="JsonHolder">
         {jsonResponse && Object.keys(jsonResponse).length > 0 && <JsonItem jsonValue={jsonResponse} />}
@@ -36,4 +36,4 @@ function App() {
   )
 }
 
-export default App;
+export default JsonRepresentation;
