@@ -3,21 +3,24 @@ import Header from './components/Header/Header';
 import './JsonRepresentation.css';
 import JsonItem from './components/JsonItem/JsonItem'
 
+
+const isValidJson = jsonValue => !!jsonValue && typeof jsonValue === 'object' && !Array.isArray(jsonValue);
+
 function JsonRepresentation({ initialUrlInput }) {
 
-  const [jsonResponse, setJsonResponse] = useState({});
+  const [jsonResponse, setJsonResponse] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
   const fetchJson = (inputValue) => {
-    setJsonResponse({});
+    setJsonResponse();
     setIsLoading(true);
     setError('');
 
     fetch(inputValue)
       .then(res => res.json())
-      .then(res => setJsonResponse(res))
-      .catch(error => setError("ERROR : " + error + ' --- please check that the url is valid'))
+      .then(res => isValidJson(res) ? setJsonResponse(res) : setError("ERROR : The repsonse is not a valid json"))
+      .catch(error => setError("ERROR : " + error + ' --- please check that the url is valid and that it returns a valid json'))
       .finally(() => setIsLoading(false));
   }
 
@@ -26,7 +29,7 @@ function JsonRepresentation({ initialUrlInput }) {
       <Header initialUrlInput={initialUrlInput} fetchJson={fetchJson} isLoading={isLoading} />
       <div className="error">{error}</div>
       <div className="jsonHolder">
-        {jsonResponse && Object.keys(jsonResponse).length > 0 && <JsonItem jsonValue={jsonResponse} />}
+        {isValidJson(jsonResponse) && <JsonItem jsonValue={jsonResponse} />}
       </div>
     </div>
   )

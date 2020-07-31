@@ -25,6 +25,7 @@ const JsonItemObjectWrapper = ({ jsonValue }) => (
 const BooleanProperty = ({ jsonValue }) => <span className="boolean value">{`${jsonValue ? "True" : "False"}`}</span>;
 const NumberProperty = ({ jsonValue }) => <span className="number value">{jsonValue}</span>;
 const StringProperty = ({ jsonValue }) => <span className="string value">{`"${jsonValue}"`}</span>;
+
 const ObjectProperty = ({ jsonValue, open }) => {
   if (jsonValue === null) {
     return <span className="null value">(null)</span>;
