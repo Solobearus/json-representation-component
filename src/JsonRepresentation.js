@@ -14,18 +14,9 @@ function JsonRepresentation({ initialUrlInput }) {
     setIsLoading(true);
     setError('');
 
-    const data = {
-      name: 'mocked response',
-      nested: {
-        obj: {},
-        arr: [],
-        arrObj: [{ c: 2, d: 3, e: { f: 5 } }, { m: 4 }]
-      }
-    }
-
     fetch(inputValue)
       .then(res => res.json())
-      .then(res => setJsonResponse(data))
+      .then(res => setJsonResponse(res))
       .catch(error => setError("ERROR : " + error + ' --- please check that the url is valid'))
       .finally(() => setIsLoading(false));
   }
