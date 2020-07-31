@@ -22,10 +22,10 @@ const JsonItemObjectWrapper = ({ jsonValue }) => (
   </>
 );
 
-const BooleanProperty = ({jsonValue}) => <span className="boolean value">{`${jsonValue ? 'True' : 'False'}`}</span>;
-const NumberProperty = ({jsonValue}) => <span className="number value">{jsonValue}</span>;
-const StringProperty = ({jsonValue})  => <span className="string value">{`"${jsonValue}"`}</span>;
-const ObjectProperty = ({jsonValue,open})  => {
+const BooleanProperty = ({ jsonValue }) => <span className="boolean value">{`${jsonValue ? "True" : "False"}`}</span>;
+const NumberProperty = ({ jsonValue }) => <span className="number value">{jsonValue}</span>;
+const StringProperty = ({ jsonValue }) => <span className="string value">{`"${jsonValue}"`}</span>;
+const ObjectProperty = ({ jsonValue, open }) => {
   if (jsonValue === null) {
     return <span className="null value">(null)</span>;
   } else {
@@ -43,15 +43,18 @@ const ObjectProperty = ({jsonValue,open})  => {
 };
 
 export const RepresentationOfValue = ({ typeOfJsonValue, open, jsonValue }) => {
-
-  const representationOfValueByTypes = {
-    boolean: <BooleanProperty jsonValue={jsonValue}/>,
-    string: <StringProperty jsonValue={jsonValue}/>,
-    number: <NumberProperty jsonValue={jsonValue}/>,
-    object: <ObjectProperty jsonValue={jsonValue} open={open}/>
-  };
-
-  return representationOfValueByTypes[typeOfJsonValue];
+  switch (typeOfJsonValue) {
+    case "boolean":
+      return <BooleanProperty jsonValue={jsonValue} />;
+    case "string":
+      return <StringProperty jsonValue={jsonValue} />;
+    case "number":
+      return <NumberProperty jsonValue={jsonValue} />;
+    case "object":
+      return <ObjectProperty jsonValue={jsonValue} open={open} />;
+    default:
+      return <></>;
+  }
 };
 
 export default RepresentationOfValue;
